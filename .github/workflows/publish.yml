@@ -33,6 +33,7 @@ jobs:
       - name: Build container
         uses: docker/build-push-action@v5
         with:
-          context: .
+          context: ./cd
+          file: ./cd/Dockerfile
           push: true
-          tags: ${{ steps.meta.outputs.tags }} 
+          tags: ${{ steps.meta.outputs.tags }}
